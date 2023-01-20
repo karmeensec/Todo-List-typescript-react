@@ -1,13 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { FC } from 'react'
+import React, { ChangeEvent, FC } from 'react'
 
-const AddTaskForm:FC = () => {
+
+
+const AddTaskForm = ( {setToDoInput}: any  ) => {
+
+    const ToDoInputHandler = function (e: ChangeEvent<HTMLInputElement>): void {
+
+        setToDoInput(e.target.value);
+
+    }
 
   return (
 
         <form style={{ minHeight: '20vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
-            <input type="text" placeholder='Add your Task...' className='add-container-input'  style={{ width: '20%', border: 'none', outline: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', background: 'transparent', color: '#F7F9F9', marginRight: '2rem', padding: '1rem' }} />
+            <input type="text" placeholder='Add your Task...' className='add-container-input'  style={{ width: '20%', border: 'none', outline: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', background: 'transparent', color: '#F7F9F9', marginRight: '2rem', padding: '1rem' }} onChange= {ToDoInputHandler} />
             
             <button type='submit' className='add-container-button' >Add</button>
 
