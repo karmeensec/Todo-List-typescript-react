@@ -14,7 +14,6 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos}: any  ) => {
     const ToDoSubmitHandler = function(e: any): void {
 
         e.preventDefault();
-
     }
 
   return (
