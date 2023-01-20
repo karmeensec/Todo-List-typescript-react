@@ -16,7 +16,7 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput}: any  ) => {
         e.preventDefault();
 
         if (e.target.value === '') {
-            setTodos([...todos, {text: toDoInput, }]);
+            setTodos([...todos, {text: toDoInput, completed: 'false', id: Math.random() * 1000 }]);
         }
         
     }
