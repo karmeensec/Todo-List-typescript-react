@@ -1,8 +1,12 @@
 import { FC, useState } from 'react'
 import './App.css'
-import AddTaskForm from './components/AddTaskForm'
+import AddTaskForm from './components/AddTaskForm';
+import ToDoList from './components/ToDoList';
+
 
 const App: FC = () => {
+
+  const [toDoInput, setToDoInput] = useState<string>('');
 
   return <div >
 
@@ -11,6 +15,7 @@ const App: FC = () => {
       </header>
       
       <AddTaskForm />
+      <ToDoList />
 
     </div>
 
