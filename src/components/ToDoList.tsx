@@ -5,9 +5,9 @@ const ToDoList:FC = () => {
 
   return (
 
-    <div>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
-      <ul>
+      <ul style={{ listStyle: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', color: '#F7F9F9', minWidth: '50vh', }}>
         <ToDo />
       </ul>
       

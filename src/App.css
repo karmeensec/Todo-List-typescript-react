@@ -34,9 +34,9 @@ body {
   }
   
   .add-container-button:hover {
-    transition: .3s ease-in-out; 
+    transition: .1s ease-in-out; 
     border: .1rem ridge;
-    transform: scale(1.04);
+    transform: scale(1.01);
     
   }
 
@@ -64,5 +64,57 @@ body {
 
   .filter-task option {
     background: #569076;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
   }
   
+
+  .complete-button {
+
+    padding: .5rem 1.3rem ;
+    font-size: 1rem;
+    gap: 2rem; 
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
+    border-left: .1rem ridge;
+    border-top: .1rem ridge;
+    border-bottom: none;
+    border-right: none;
+    border-radius: .5rem;
+    
+    background: transparent;
+    font-family: 'Indie Flower';
+    color: #F7F9F9;
+    margin: 0 2rem;
+
+  }
+
+  .trash-button {
+
+    padding: .5rem 1.3rem ;
+    font-size: 1rem;
+    gap: 2rem; 
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
+    border-left: .1rem ridge;
+    border-top: .1rem ridge;
+    border-bottom: none;
+    border-right: none;
+    border-radius: .5rem;
+    
+    background: transparent;
+    font-family: 'Indie Flower';
+    color: #5e3849;
+
+  }
+
+  .complete-button:hover, .trash-button:hover  {
+    transition: .1s ease-in-out; 
+    border: .1rem ridge;
+    transform: scale(1.01);
+    
+  }
