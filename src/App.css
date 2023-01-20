@@ -39,4 +39,30 @@ body {
     transform: scale(1.04);
     
   }
+
+  .filter-task {
+
+    margin-left: 2rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    gap: 2rem; 
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    border-left: .1rem ridge;
+    border-top: .1rem ridge;
+    border-bottom: none;
+    border-right: none;
+    border-radius: .5rem;
+    outline: none;
+
+    background: transparent;
+    font-family: 'Indie Flower';
+    color: #F7F9F9;
+
+  }
+
+  .filter-task option {
+    background: #569076;
+  }
   
