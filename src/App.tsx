@@ -7,6 +7,7 @@ import ToDoList from './components/ToDoList';
 const App: FC = () => {
 
   const [toDoInput, setToDoInput] = useState<string>('');
+  const [todos, setTodos] = useState<string[]>([]);
   
 
   return <div >
