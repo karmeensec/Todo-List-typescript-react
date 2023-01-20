@@ -13,7 +13,7 @@ const AddTaskForm:FC = () => {
 
             <div>
 
-                <select name="todos" >
+                <select name="todos" className='filter-task' >
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="incomplete">Incomplete</option>
