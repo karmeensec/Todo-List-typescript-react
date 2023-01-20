@@ -1,11 +1,16 @@
 import React, { FC } from 'react'
+import ToDo from './ToDo'
 
 const ToDoList:FC = () => {
 
   return (
 
     <div>
-      <ul></ul>
+
+      <ul>
+        <ToDo />
+      </ul>
+      
     </div>
 
   )
