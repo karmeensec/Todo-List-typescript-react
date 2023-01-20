@@ -7,7 +7,7 @@ const AddTaskForm:FC = () => {
 
         <form style={{ minHeight: '20vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
-            <input type="text" placeholder='Add your Task...' className='add-container-input'  style={{ border: 'none', outline: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', background: 'none', color: '#F7F9F9', }} />
+            <input type="text" placeholder='Add your Task...' className='add-container-input'  style={{ width: '20%', border: 'none', outline: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', background: 'transparent', color: '#F7F9F9', marginRight: '2rem', padding: '1rem' }} />
             
             <button type='submit' className='add-container-button' >Add</button>
 
