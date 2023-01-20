@@ -17,7 +17,7 @@ const App: FC = () => {
       </header>
       
       <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} />
-      <ToDoList />
+      <ToDoList todos = {todos} />
 
     </div>
 
