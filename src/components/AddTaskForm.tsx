@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { ChangeEvent, FC } from 'react'
 
 
