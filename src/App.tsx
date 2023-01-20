@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import './App.css'
+import AddTaskForm from './components/AddTaskForm'
 
-function App() {
+const App: FC = () => {
 
   return (
 
-    <div></div>
+    <div>
+
+      <h1>Your To Do List</h1>
+
+      <AddTaskForm />
+
+    </div>
 
   )
 }
