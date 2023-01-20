@@ -18,6 +18,8 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput}: any  ) => {
         if (e.target.value === '') {
             setTodos([...todos, {text: toDoInput, completed: 'false', id: Math.random() * 1000 }]);
         }
+
+        setToDoInput('');
         
     }
 
@@ -25,7 +27,7 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput}: any  ) => {
 
         <form style={{ minHeight: '20vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
-            <input type="text" placeholder='Add your Task...' className='add-container-input'  style={{ width: '20%', border: 'none', outline: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', background: 'transparent', color: '#F7F9F9', marginRight: '2rem', padding: '1rem' }} onChange= {ToDoInputHandler} />
+            <input type="text" placeholder='Add your Task...' className='add-container-input' value={toDoInput} style={{ width: '20%', border: 'none', outline: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', background: 'transparent', color: '#F7F9F9', marginRight: '2rem', padding: '1rem' }} onChange= {ToDoInputHandler} />
             
             <button type='submit' className='add-container-button' onClick={ToDoSubmitHandler} >Add</button>
 
