@@ -3,3 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    min-height: 100vh;
+}
+
+.add-container-input::placeholder {
+
+    color: #F7F9F9;
+  
+  }
+
+.add-container-button {
+
+    padding: .5rem 3rem;
+    font-size: 1rem;
+    gap: 2rem; 
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
+    border-left: .1rem ridge;
+    border-top: .1rem ridge;
+    border-bottom: none;
+    border-right: none;
+    border-radius: .5rem;
+    
+    background: transparent;
+    font-family: 'Indie Flower';
+    color: #F7F9F9;
+  }
+  
+  .add-container-button:hover {
+    transition: .3s ease-in-out; 
+    border: .1rem ridge;
+    transform: scale(1.04);
+    
+  }
+  
