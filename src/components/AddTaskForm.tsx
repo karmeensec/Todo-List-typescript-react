@@ -3,7 +3,7 @@ import React, { ChangeEvent, FC } from 'react'
 
 
 
-const AddTaskForm = ( {setToDoInput, todos, setTodos}: any  ) => {
+const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput}: any  ) => {
 
     const ToDoInputHandler = function (e: ChangeEvent<HTMLInputElement>): void {
 
@@ -14,6 +14,11 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos}: any  ) => {
     const ToDoSubmitHandler = function(e: any): void {
 
         e.preventDefault();
+
+        if (e.target.value === '') {
+            setTodos([...todos, {text: toDoInput, }]);
+        }
+        
     }
 
   return (
