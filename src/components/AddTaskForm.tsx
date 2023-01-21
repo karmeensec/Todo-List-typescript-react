@@ -22,6 +22,13 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, filterTodos, se
         
     }
 
+
+    const ToDoFilterHandler = function(e: ChangeEvent<HTMLInputElement>): void {
+
+
+
+    }
+
   return (
 
         <form style={{ minHeight: '20vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
