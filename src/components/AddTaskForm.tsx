@@ -2,7 +2,7 @@ import React, { ChangeEvent, FC } from 'react'
 
 
 
-const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, toDoPosition, setToDoPosition}: any  ) => {
+const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, toDoPosition, setToDoPosition, hasError, setHasError}: any  ) => {
 
     const ToDoInputHandler = function (e: ChangeEvent<HTMLInputElement>): void {
 
@@ -14,8 +14,12 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, toDoPosition, s
 
         e.preventDefault();
 
-        if (e.target.value === '') {
+        if (toDoInput !== '') {
             setTodos([...todos, {text: toDoInput, completed: 'false', id: Math.random() * 1000 }]);
+            setHasError(false);
+        }
+        else {
+            setHasError(true);
         }
 
         setToDoInput('');
@@ -46,6 +50,8 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, toDoPosition, s
                 </select>
 
             </div>
+
+            { hasError && <div className="error-message">Please Enter a Todo</div>}
 
         </form>
 
