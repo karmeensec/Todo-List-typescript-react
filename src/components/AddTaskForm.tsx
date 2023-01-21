@@ -23,7 +23,7 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, toDoPosition, s
     }
 
 
-    const ToDoFilterHandler = function(e: any): void {
+    const ToDoPositonHandler = function(e: any): void {
 
         setToDoPosition(e.target.value);
 
@@ -39,7 +39,7 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, toDoPosition, s
 
             <div>
 
-                <select onChange={ToDoFilterHandler} name="todos" className='filter-task' >
+                <select onChange={ToDoPositonHandler} name="todos" className='filter-task' >
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="incomplete">Incomplete</option>
