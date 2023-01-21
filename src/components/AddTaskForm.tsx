@@ -2,7 +2,7 @@ import React, { ChangeEvent, FC } from 'react'
 
 
 
-const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, filterTodos, setFilterTodos}: any  ) => {
+const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, toDoPosition, setToDoPosition}: any  ) => {
 
     const ToDoInputHandler = function (e: ChangeEvent<HTMLInputElement>): void {
 
@@ -23,9 +23,9 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, filterTodos, se
     }
 
 
-    const ToDoFilterHandler = function(e: ChangeEvent<HTMLInputElement>): void {
+    const ToDoFilterHandler = function(e: any): void {
 
-
+        setToDoPosition(e.target.value);
 
     }
 
@@ -39,7 +39,7 @@ const AddTaskForm = ( {setToDoInput, todos, setTodos, toDoInput, filterTodos, se
 
             <div>
 
-                <select name="todos" className='filter-task' >
+                <select onChange={ToDoFilterHandler} name="todos" className='filter-task' >
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="incomplete">Incomplete</option>
