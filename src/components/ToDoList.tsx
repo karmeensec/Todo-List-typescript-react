@@ -10,7 +10,7 @@ const ToDoList = ({ todos, setTodos }: any) => {
 
       <ul style={{ listStyle: 'none', fontSize: '1.5rem', fontFamily: 'Indie Flower', color: '#F7F9F9', minWidth: '50vh', }}>
           {todos.map( (todo: any) => ( 
-            <ToDo text = {todo.text} id = {todo.id} key={todo.id} todos = {todos} setTodos = {setTodos} />
+            <ToDo text = {todo.text} id = {todo.id} key={todo.id} todos = {todos} setTodos = {setTodos} todo={todo} />
           ))}
       </ul>
       

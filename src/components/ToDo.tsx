@@ -1,11 +1,11 @@
 import React from 'react'
 import {VscCheck, VscTrash} from 'react-icons/vsc'
 
-const ToDo = ({ text, todos, setTodos}: any) => {
+const ToDo = ({ text, todos, setTodos, todo}: any) => {
 
   const ToDoDeleteHandler = function(): void {
 
-
+    setTodos(todos.filter((t: any) => t.text !== text));
 
   }
 
@@ -15,7 +15,7 @@ const ToDo = ({ text, todos, setTodos}: any) => {
 
         <li style={{ padding: '1rem' }}> {text} </li>
         <button type='submit' className='complete-button'> <VscCheck /> </button>
-        <button type='submit' className='trash-button'> <VscTrash /> </button>
+        <button type='submit' className='trash-button' onClick={ToDoDeleteHandler}> <VscTrash /> </button>
 
     </div>
 
