@@ -5,8 +5,9 @@ const ToDo = ({ text, todos, setTodos, todo}: any) => {
 
   const ToDoDeleteHandler = function(): void {
 
-    setTodos(todos.filter((t: any) => t.text !== text));
-
+    // setTodos(todos.filter((t: any) => t.text !== text));
+    setTodos(todos.filter((t: any) => t.id !== todo.id));
+    
   }
 
   return (
