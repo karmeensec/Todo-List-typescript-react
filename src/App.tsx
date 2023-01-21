@@ -10,6 +10,13 @@ const App: FC = () => {
   const [todos, setTodos] = useState<string[]>([]);
   const [toDoPosition, setToDoPosition] = useState<string>('all');
   const [toDoFilter, setToDoFilter] = useState<string[]>([]);
+
+  const ToDoFilterHandler = function (): void {
+
+
+
+  }
+
   
 
   return <div >
