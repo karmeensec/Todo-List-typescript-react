@@ -17,7 +17,7 @@ const App: FC = () => {
         <h3 style={{  fontSize: '2.5rem', fontFamily:  'Gloria Hallelujah', color: '#F7F9F9',}}>Your To Do List</h3>
       </header>
       
-      <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} />
+      <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} filterTodos = {filterTodos} setFilterTodos = {setFilterTodos} />
       <ToDoList todos = {todos} setTodos = {setTodos} />
 
     </div>
