@@ -35,8 +35,23 @@ const App: FC = () => {
   useEffect( ()=> {
 
     ToDoFilterHandler();
+    ToDoSaveLocalStorage();
 
-  }, [todos, toDoPosition])
+  }, [todos, toDoPosition]);
+
+
+
+  const ToDoSaveLocalStorage = function (): void {
+
+    if (localStorage.getItem('todos') === null) {
+      localStorage.setItem('todos', JSON.stringify([]));
+    } 
+
+    else {
+      localStorage.setItem('todos', JSON.stringify(todos));
+    }
+
+  };
 
   
 
