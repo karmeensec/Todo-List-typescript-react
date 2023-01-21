@@ -135,10 +135,15 @@ body {
 
   .error-message {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem,;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px !important;
     font-family:  Gloria Hallelujah;
     color: #F7F9F9;
+    width: 20%;
+    opacity: 0.4;
   }
