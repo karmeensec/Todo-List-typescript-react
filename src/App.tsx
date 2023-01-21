@@ -8,6 +8,7 @@ const App: FC = () => {
 
   const [toDoInput, setToDoInput] = useState<string>('');
   const [todos, setTodos] = useState<string[]>([]);
+  const [filterTodos, setFilterTodos] = useState<string>('all');
   
 
   return <div >
