@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { FC, useState } from 'react'
 import './App.css'
 import AddTaskForm from './components/AddTaskForm';
@@ -10,19 +11,19 @@ const App: FC = () => {
   const [todos, setTodos] = useState<string[]>([]);
   const [toDoPosition, setToDoPosition] = useState<string>('all');
   const [toDoFilter, setToDoFilter] = useState<string[]>([]);
-  const [hasError, setHasError] = useState(false);
-  const [showError, setShowError] = useState(false);
+  const [hasError, setHasError] = useState<boolean>(false);
+  const [showError, setShowError] = useState<boolean>(false);
 
   const ToDoFilterHandler = function (): void {
 
     switch (toDoPosition) {
 
       case 'completed':
-        setToDoFilter(todos.filter((todo: any) => todo.completed === true));
+        setToDoFilter(todos.filter((todo: any) => todo.completed === false));
         break;
 
       case 'incomplete':
-        setToDoFilter(todos.filter((todo: any) => todo.completed === false));
+        setToDoFilter(todos.filter((todo: any) => todo.completed === true));
 
       default:
         setToDoFilter(todos);
@@ -30,6 +31,12 @@ const App: FC = () => {
     }
 
   }
+
+  useEffect( ()=> {
+
+    ToDoFilterHandler();
+
+  }, [todos, toDoPosition])
 
   
 
@@ -40,7 +47,7 @@ const App: FC = () => {
       </header>
       
       <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} toDoPosition = {toDoPosition} setToDoPosition = {setToDoPosition} hasError = {hasError} setHasError = {setHasError} showError = {showError} setShowError = {setShowError}  />
-      <ToDoList todos = {todos} setTodos = {setTodos} />
+      <ToDoList todos = {todos} setTodos = {setTodos} toDoFilter = {toDoFilter} />
 
     </div>
 
