@@ -1,7 +1,13 @@
 import React from 'react'
 import {VscCheck, VscTrash} from 'react-icons/vsc'
 
-const ToDo = ({ text}: any) => {
+const ToDo = ({ text, todos, setTodos}: any) => {
+
+  const ToDoDeleteHandler = function(): void {
+
+
+
+  }
 
   return (
 
