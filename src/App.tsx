@@ -11,6 +11,7 @@ const App: FC = () => {
   const [toDoPosition, setToDoPosition] = useState<string>('all');
   const [toDoFilter, setToDoFilter] = useState<string[]>([]);
   const [hasError, setHasError] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const ToDoFilterHandler = function (): void {
 
@@ -38,7 +39,7 @@ const App: FC = () => {
         <h3 style={{  fontSize: '2.5rem', fontFamily:  'Gloria Hallelujah', color: '#F7F9F9',}}>Your To Do List</h3>
       </header>
       
-      <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} toDoPosition = {toDoPosition} setToDoPosition = {setToDoPosition} hasError = {hasError} setHasError = {setHasError} />
+      <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} toDoPosition = {toDoPosition} setToDoPosition = {setToDoPosition} hasError = {hasError} setHasError = {setHasError} showError = {showError} setShowError = {setShowError}  />
       <ToDoList todos = {todos} setTodos = {setTodos} />
 
     </div>
