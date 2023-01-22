@@ -27,9 +27,11 @@ const App: FC = () => {
 
       case 'incomplete':
         setToDoFilter(todos.filter((todo: any) => todo.completed === true));
+        break;
 
       default:
         setToDoFilter(todos);
+        break;
 
     }
 
