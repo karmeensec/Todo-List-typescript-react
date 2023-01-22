@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: .6rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #A2C8B7;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #386D64;
+  border-radius: 1rem;
+}
+
 body {
     min-height: 100vh;
 }
@@ -147,3 +160,24 @@ body {
     width: 20%;
     opacity: 0.4;
   }
+
+ .svg {
+  transform: scale(0.1);
+  
+
+  stroke-dasharray: 411.6537170410156;
+  animation: 3s fillSVG linear infinite;
+ }
+
+ @keyframes fillSVG {
+
+  0%{
+    stroke-dashoffset: 411.6537170410156;
+
+  }
+  100%{
+    stroke-dashoffset: 0;
+
+  }
+
+ }
