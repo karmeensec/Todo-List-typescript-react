@@ -39,16 +39,29 @@ const App: FC = () => {
 
   }, [todos, toDoPosition]);
 
+  useEffect( ()=> {
+
+    ToDoRetrieveLocalStorage();
+
+  }, [])
+
 
 
   const ToDoSaveLocalStorage = function (): void {
 
+      localStorage.setItem('todos', JSON.stringify(todos));
+
+  };
+
+  const ToDoRetrieveLocalStorage = (): any => {
+
     if (localStorage.getItem('todos') === null) {
       localStorage.setItem('todos', JSON.stringify([]));
-    } 
+    }
 
     else {
-      localStorage.setItem('todos', JSON.stringify(todos));
+      let storedTodos = JSON.parse(localStorage.getItem('todos') as string);
+      if(storedTodos) setTodos(storedTodos);
     }
 
   };
@@ -63,6 +76,7 @@ const App: FC = () => {
       
       <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} toDoPosition = {toDoPosition} setToDoPosition = {setToDoPosition} hasError = {hasError} setHasError = {setHasError} showError = {showError} setShowError = {setShowError}  />
       <ToDoList todos = {todos} setTodos = {setTodos} toDoFilter = {toDoFilter} />
+
 
     </div>
 
