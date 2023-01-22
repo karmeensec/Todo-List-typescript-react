@@ -3,6 +3,7 @@ import { FC, useState } from 'react'
 import './App.css'
 import AddTaskForm from './components/AddTaskForm';
 import ToDoList from './components/ToDoList';
+import {CgCopyright} from 'react-icons/cg'
 
 
 const App: FC = () => {
@@ -77,6 +78,7 @@ const App: FC = () => {
       <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} toDoPosition = {toDoPosition} setToDoPosition = {setToDoPosition} hasError = {hasError} setHasError = {setHasError} showError = {showError} setShowError = {setShowError}  />
       <ToDoList todos = {todos} setTodos = {setTodos} toDoFilter = {toDoFilter} />
 
+       <footer style={{ position: 'absolute', left: '0', bottom: '0', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', padding: '.1rem', fontSize: '16px', fontFamily: 'Indie Flower', color: '#F7F9F9', background: 'transparent' }}> <CgCopyright /> Copyright by Kamil Ismayilzada. </footer> 
 
     </div>
 
