@@ -157,7 +157,7 @@ body {
     font-size: 30px !important;
     font-family:  Gloria Hallelujah;
     color: #F7F9F9;
-    width: 20%;
+    width: 30%;
     opacity: 0.4;
   }
 
@@ -178,6 +178,55 @@ body {
   100%{
     stroke-dashoffset: 0;
 
+  }
+
+ }
+
+
+
+
+
+
+ @media (max-width: 991px) {
+
+  html {
+    font-size: 80%;
+  }
+
+  .error-message  {
+    font-size: 20px !important;
+  }
+
+ }
+
+
+ @media (max-width: 768px) {
+
+  html {
+    font-size: 70%;
+  }
+
+  .error-message  {
+    font-size: 15px !important;
+  }
+
+ }
+
+
+ @media (max-width: 450px) {
+
+
+
+  .add-container-input {
+    font-size: 1rem !important;
+  }
+
+  .add-container-input::placeholder {
+    font-size: 8px !important;
+  }
+
+  .error-message  {
+    font-size: 10px !important;
   }
 
  }
