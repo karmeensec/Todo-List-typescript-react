@@ -11,9 +11,9 @@ import Signature from './components/Signature';
 const App: FC = () => {
 
   const [toDoInput, setToDoInput] = useState<string>('');
-  const [todos, setTodos] = useState<string[]>([]);
+  const [todos, setTodos] = useState<{ text: string, completed: boolean, id: number }[]>([]);
   const [toDoPosition, setToDoPosition] = useState<string>('all');
-  const [toDoFilter, setToDoFilter] = useState<string[]>([]);
+  const [toDoFilter, setToDoFilter] = useState<{ text: string, completed: boolean, id: number }[]>([]);
   const [hasError, setHasError] = useState<boolean>(false);
   const [showError, setShowError] = useState<boolean>(false);
 
@@ -37,39 +37,29 @@ const App: FC = () => {
 
   }
 
-  useEffect( ()=> {
 
-    ToDoFilterHandler();
-    ToDoSaveLocalStorage();
-
-  }, [todos, toDoPosition]);
+//Trying to get data from local storage
 
   useEffect( ()=> {
 
-    ToDoRetrieveLocalStorage();
+    const data = window.localStorage.getItem('todos');
+    if (data !== null) setTodos(JSON.parse(data));
 
   }, [])
 
 
+  //Trying to save data to local storage
 
-  const ToDoSaveLocalStorage = function (): void {
+  useEffect( ()=> {
 
-      localStorage.setItem('todos', JSON.stringify(todos));
+    ToDoFilterHandler();
+    window.localStorage.setItem('todos', JSON.stringify(todos));
 
-  };
+  }, [todos, toDoPosition]);
 
-  const ToDoRetrieveLocalStorage = (): any => {
+ 
 
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', JSON.stringify([]));
-    }
-
-    else {
-      let storedTodos = JSON.parse(localStorage.getItem('todos') as string);
-      if(storedTodos) setTodos(storedTodos);
-    }
-
-  };
+  
 
   
 
