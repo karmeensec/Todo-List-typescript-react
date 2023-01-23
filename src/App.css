@@ -17,8 +17,10 @@
   border-radius: 1rem;
 }
 
+
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .add-container-input::placeholder {
