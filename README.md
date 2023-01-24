@@ -71,41 +71,6 @@ Start the server
 ```
 
 
-## Run Locally
-
-Clone the project
-
-```bash
-  https://github.com/Kamilismayilzade/Todo-List-typescript-react
-```
-
-Go to the project directory
-
-```bash
-  cd to-do-list-typescript-react
-```
-
-Install dependencies
-
-```bash
-  npm install
-  npm install react-icons --save
-```
-
-Install Dev Dependencies
-
-```bash
-  npm create vite@latest
-  npm install typescript --save-dev
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
-
-
 ## Tech Stack
 
 **Client:** React-TypeScript
