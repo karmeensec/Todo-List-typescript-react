@@ -4,6 +4,7 @@ import './App.css'
 import AddTaskForm from './components/AddTaskForm';
 import ToDoList from './components/ToDoList';
 import Signature from './components/Signature';
+import {BiCopyright} from 'react-icons/bi'
 
 
 
@@ -57,19 +58,24 @@ const App: FC = () => {
   }, [todos, toDoPosition]);
 
  
-  return <div >
+  return <>
+  
+    <div >
 
       <header style={{ minHeight: '20vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <h3 style={{  fontSize: '2.5rem', fontFamily:  'Gloria Hallelujah', color: '#F7F9F9',}}>Your To Do List</h3>
       </header>
       
       <AddTaskForm setToDoInput = {setToDoInput} todos = {todos} setTodos = {setTodos} toDoInput = {toDoInput} toDoPosition = {toDoPosition} setToDoPosition = {setToDoPosition} hasError = {hasError} setHasError = {setHasError} showError = {showError} setShowError = {setShowError}  />
-      <ToDoList todos = {todos} setTodos = {setTodos} toDoFilter = {toDoFilter} />
+      <ToDoList todos = {todos} setTodos = {setTodos} toDoFilter = {toDoFilter}  />
 
-      {/* <Signature /> */}
+      
 
     </div>
 
+    <footer style={{  position: 'fixed', bottom: '0', margin: '1rem', fontSize: '.8rem', fontFamily: 'Indie Flower',  color: '#F7F9F9',  }}> <BiCopyright /> Kamil Ismayilzada</footer>
+
+  </>
   
 }
 
